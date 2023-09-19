@@ -27,6 +27,10 @@ void env(char **tkorder __attribute__((unused)))
 
 void quit(char **tkorder)
 {
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
 	int num_token = 0, arg;
 
 	for (; tkorder[num_token] != NULL; num_token++)

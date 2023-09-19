@@ -9,6 +9,9 @@
 void irresponsive(void)
 {
 	char **current_token = NULL;
+	char *line = NULL;
+	char **commands = NULL;
+	int status = 0;
 	int i, describe_token = 0;
 	size_t n = 0;
 
@@ -28,7 +31,7 @@ void irresponsive(void)
 					break;
 				}
 				describe_token = desc_order(current_token[0]);
-				initializer(current_token, describe_token);
+				commence(current_token, describe_token);
 				free(current_token);
 			}
 			free(commands);

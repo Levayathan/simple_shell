@@ -1,5 +1,7 @@
 #include "shell.h"
 
+	char *shell_name;
+
 /**
  * main - the shell's main code
  * @argc: count of all arguments given
@@ -13,7 +15,6 @@ int main(int argc __attribute__((unused)), char **argv)
 {
 	char **commands = NULL;
 	char *line = NULL;
-	char *shell_name = NULL;
 	int status = 0;
 	char **current_token = NULL;
 	int i, describe_token = 0;
@@ -42,7 +43,7 @@ int main(int argc __attribute__((unused)), char **argv)
 				break;
 			}
 			describe_token = desc_order(current_token[0]);
-			initializer(current_token, describe_token);
+			commence(current_token, describe_token);
 			free(current_token);
 		}
 		free(commands);

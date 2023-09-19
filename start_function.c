@@ -10,6 +10,7 @@
 
 void commence(char **current_token, int describe_token)
 {
+	int status = 0;
 	pid_t PID;
 
 	if (describe_token == EXTERNAL_COMMAND || describe_token == PATH_COMMAND)

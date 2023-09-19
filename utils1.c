@@ -1,5 +1,6 @@
 #include "shell.h"
 
+	int status;
 /**
  * desc_order - finds the command type
  * @order: the command to be described
@@ -42,6 +43,7 @@ int desc_order(char *order)
  */
 void launch_order(char **tkorder, int order_type)
 {
+	char *shell_name = NULL;
 	void (*function)(char **order);
 
 	if (order_type == EXTERNAL_COMMAND)
