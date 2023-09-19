@@ -101,3 +101,4 @@ int _lenght(char *strin)
 		;
 	return (len);
 }
+

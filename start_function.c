@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * initializer - manages the executing of everything
+ * commence - manages the executing of everything
  * @current_token: checks the present token
  * @describe_token: describe token
  *
@@ -26,3 +26,4 @@ void commence(char **current_token, int describe_token)
 	else
 		launch_order(current_token, describe_token);
 }
+

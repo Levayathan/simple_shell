@@ -67,20 +67,20 @@ int _lensub(char *tres, char *quatro)
 
 /**
  *_countdiff - counts the caracters that exists in string 1 and not in 2
- *@tres: string to look in
- *@quatro: string to use
+ *@str1: string to look in
+ *@str2: string to use
  *
  *Return: return number of caracters that remains in string 2
  */
 
 
-int _countdiff(char *str1, char *quatro)
+int _countdiff(char *str1, char *str2)
 {
 	int len = 0, i;
 
-	for (i = 0; tres[i] != '\0'; i++)
+	for (i = 0; str1[i] != '\0'; i++)
 	{
-		if (_locchar(quatro, tres[i]) != NULL)
+		if (_locchar(str2, str1[i]) != NULL)
 			break;
 		len++;
 	}
@@ -106,3 +106,4 @@ char *_locchar(char *st, char c)
 	else
 		return (NULL);
 }
+

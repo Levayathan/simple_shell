@@ -37,3 +37,4 @@ void irresponsive(void)
 		exit(status);
 	}
 }
+

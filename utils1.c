@@ -1,6 +1,7 @@
 #include "shell.h"
 
-/** desc_order - finds the command type
+/**
+ * desc_order - finds the command type
  * @order: the command to be described
  *
  * Return: the type of the command
@@ -157,3 +158,4 @@ char *val_env(char *env_name)
 	}
 	return (NULL);
 }
+
