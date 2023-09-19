@@ -1,11 +1,5 @@
 #include "shell.h"
 
-
-	char **commands = NULL;
-	char *line = NULL;
-	char *shell_name = NULL;
-	int status = 0;
-
 /**
  * main - the shell's main code
  * @argc: count of all arguments given
@@ -17,6 +11,10 @@
 
 int main(int argc __attribute__((unused)), char **argv)
 {
+	char **commands = NULL;
+	char *line = NULL;
+	char *shell_name = NULL;
+	int status = 0;
 	char **current_token = NULL;
 	int i, describe_token = 0;
 	size_t n = 0;
@@ -35,7 +33,6 @@ int main(int argc __attribute__((unused)), char **argv)
 			deleteline(line);
 			delete_text(line);
 			commands = tkmaker(line, ";");
-
 		for (i = 0; commands[i] != NULL; i++)
 		{
 			current_token = tkmaker(commands[i], " ");
@@ -45,14 +42,12 @@ int main(int argc __attribute__((unused)), char **argv)
 				break;
 			}
 			describe_token = desc_order(current_token[0]);
-
 			initializer(current_token, describe_token);
 			free(current_token);
 		}
 		free(commands);
 	}
 	free(line);
-
 	return (status);
 }
 
