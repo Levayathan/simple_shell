@@ -22,7 +22,7 @@
 #define min(x, y) (((x) < (y)) ? (x) : (y))
 
 /**
- *struct link - a struct thatlinking a commands name to a function 
+ *struct link - a struct thatlinking a commands name to a function
  *
  *@order_name: command's name
  *@function: function executing the command
