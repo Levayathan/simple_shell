@@ -70,4 +70,4 @@ void quit(char **);
 extern void irresponsive(void);
 extern void commence(char **current_token, int describe_token);
 
-#endif
+#endif // SHELL_H
