@@ -1,6 +1,6 @@
 #include "shell.h"
 
-	char *shell_name;
+	static char *shell_name;
 
 /**
  * main - the shell's main code

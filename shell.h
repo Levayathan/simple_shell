@@ -37,8 +37,6 @@ typedef struct link
 extern char **environ;
 extern char *line;
 extern char **commands;
-extern char *shell_name;
-extern int status;
 
 void print(char *, int);
 char **tkmaker(char *, char *);
@@ -70,4 +68,4 @@ void quit(char **);
 extern void irresponsive(void);
 extern void commence(char **current_token, int describe_token);
 
-#endif // SHELL_H
+#endif

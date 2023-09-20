@@ -1,5 +1,7 @@
 #include "shell.h"
 
+	static int status;
+
 /**
  * commence - manages the executing of everything
  * @current_token: checks the present token
@@ -10,7 +12,6 @@
 
 void commence(char **current_token, int describe_token)
 {
-	int status = 0;
 	pid_t PID;
 
 	if (describe_token == EXTERNAL_COMMAND || describe_token == PATH_COMMAND)

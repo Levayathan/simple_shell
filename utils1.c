@@ -1,6 +1,7 @@
 #include "shell.h"
 
-	int status;
+	static int status;
+
 /**
  * desc_order - finds the command type
  * @order: the command to be described
